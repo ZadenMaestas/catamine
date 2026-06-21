@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Catamine</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="index.js"></script>
 </head>
-<body>
-$END$
+<body class="bg-gray-950 text-gray-100">
+
+<div class="max-w-6xl mx-auto px-6 py-8">
+    <header>
+        <div class="flex items-center justify-between">
+            <span class="font-bold text-amber-400 text-lg">🐱 Catamine</span>
+            <nav class="flex gap-4">
+                <a href="#about" class="text-gray-400 hover:text-amber-300 text-sm">About</a>
+                <a target="_blank" href="https://github.com/ZadenMaestas/catamine" class="text-gray-400 hover:text-amber-300 text-sm">Source Code</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="flex justify-center my-4">
+        <div class="inline-flex rounded overflow-hidden border border-gray-700">
+            <button id="rdm-img__tab__btn" class="px-4 py-2 text-sm text-gray-300 bg-gray-800 hover:bg-gray-700 border-r border-gray-700">Random Image</button>
+            <button id="browse__tab__btn" class="px-4 py-2 text-sm text-white bg-amber-500 hover:bg-amber-400">Browse</button>
+            <button id="img-gen__tab__btn" class="px-4 py-2 text-sm text-gray-300 bg-gray-800 hover:bg-gray-700">Generate Image</button>
+        </div>
+    </div>
+
+    <div id="filters" class="my-4">
+        <select id="tag-filter" class="w-64 px-3 py-2 border border-gray-700 rounded text-gray-100 bg-gray-800 focus:outline-none focus:border-amber-500">
+            <option value="" disabled selected>Select a tag</option>
+        </select>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3" id="app"></div>
+</div>
+<footer class="max-w-6xl mx-auto px-6 py-4 mt-4 border-t border-gray-800">
+    <div id="about" class="py-6">
+        <h2 class="font-bold text-amber-400 text-lg mb-2">About</h2>
+        <p class="text-gray-400 text-sm leading-relaxed">Catamine is a cat image browser powered by the <a href="https://cataas.com" class="text-amber-300 hover:underline">CATAAS</a> API. Browse, filter by tag, and enjoy cats.</p>
+    </div>
+    <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+        <span class="font-bold text-amber-400 text-sm">🐱 Catamine</span>
+        <span class="text-gray-500 text-sm">Zaden Maestas &copy; 2026 All rights reserved.</span>
+    </div>
+</footer>
+
 </body>
 </html>
